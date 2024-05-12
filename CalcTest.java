@@ -2,16 +2,19 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class CalcTest {
+
+    private Calculator calculator = new Calculator();
     
     @Test
-    public void addTests(){
-        Assert.assertEquals(10, new Calculator().add(1, 9));
-        Assert.assertEquals(9, new Calculator().add(4, 4));
+    public void testAddPositiveIntegers() {
+        int result = calculator.add(5, 7);
+        Assert.assertEquals(12, result);
     }
 
-    public void another(){
-        Assert.asserEquals(0, new Calculator().add(11, 11));
+    @Test
+    public void testAddNegativeIntegers() {
+        int result = calculator.add(-3, -2);
+        Assert.assertEquals(-5, result);
     }
     
-
 }
