@@ -1,0 +1,3 @@
+This is incase you forget the command used to compile and run the test.
+javac -cp ".;junit-4.13.2.jar" CalcTest.java
+java -cp ".;junit-4.13.2.jar;hamcrest-core-1.3.jar" org.junit.runner.JUnitCore CalcTest
