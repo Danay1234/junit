@@ -9,4 +9,9 @@ public class CalcTest {
         Assert.assertEquals(9, new Calculator().add(4, 4));
     }
 
+    public void another(){
+        Assert.asserEquals(0, new Calculator().add(11, 11));
+    }
+    
+
 }
