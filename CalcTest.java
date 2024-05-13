@@ -16,5 +16,11 @@ public class CalcTest {
         int result = calculator.add(-3, -2);
         Assert.assertEquals(-5, result);
     }
+
+    @Test
+    public void testSqrt() {
+        Assert.assertEquals(2.0, calculator.sqrt(4.0), 0.01);
+        Assert.assertEquals(2.1, calculator.sqrt(5.0), 0.01); //supposed to fail
+    }
     
 }
