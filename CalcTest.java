@@ -22,5 +22,12 @@ public class CalcTest {
         Assert.assertEquals(2.0, calculator.sqrt(4.0), 0.01);
         Assert.assertEquals(2.1, calculator.sqrt(5.0), 0.01); //supposed to fail
     }
+
+    @Test
+    public void testSqrt() {
+        Assert.assertEquals(2.0, calculator.sqrt(4.0), 0.001);
+        Assert.assertEquals(0.0, calculator.sqrt(0.0), 0.001);
+        Assert.assertThrows(IllegalArgumentException.class, () -> calculator.sqrt(-1.0));
+    }
     
 }
