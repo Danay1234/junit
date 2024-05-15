@@ -23,6 +23,10 @@ public class Calculator {
         if (n < 0) {
             throw new IllegalArgumentException("Negative numbers not allowed");
         }
+        if (n > 20){
+            //if the resulting factorial will be too large to fit in a long (which is 21 and above).
+            throw new ArithmeticException("The Resulting number will be too big to fit inside a long type.");
+        }
         long result = 1;
         for (int i = 1; i <= n; i++) {
             result *= i;
