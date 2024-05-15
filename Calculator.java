@@ -12,6 +12,25 @@ public class Calculator {
         return a * b;
     }
 
+    public double divide(double a, double b) {
+        if (b == 0) {
+            throw new ArithmeticException("Division by zero");
+        }
+        return a / b;
+    }
+
+    public long factorial(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Negative numbers not allowed");
+        }
+        long result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    //include many test cases for this method later.
     public double sqrt(double a) {
         if (a < 0) {
             throw new IllegalArgumentException("Cannot calculate square root of a negative number");
@@ -28,9 +47,6 @@ public class Calculator {
 
         return guess;
     }
-
-
-        
 
 
 }
