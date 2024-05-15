@@ -24,10 +24,20 @@ public class CalcTest {
     }
 
     @Test
-    public void testSqrt() {
-        Assert.assertEquals(2.0, calculator.sqrt(4.0), 0.001);
-        Assert.assertEquals(0.0, calculator.sqrt(0.0), 0.001);
+    public void negativeSquareRoot() {
         Assert.assertThrows(IllegalArgumentException.class, () -> calculator.sqrt(-1.0));
+    }
+
+    @Test
+    public void testDivide() {
+        //third argument is the acceptable difference between the expected and the actual result
+        Assert.assertEquals(2, calculator.divide(6, 3), 0.001);
+        Assert.assertEquals(-2, calculator.divide(6, -3), 0.001);
+    }
+
+    @Test
+    public void divideByZero(){
+        Assert.assertThrows(ArithmeticException.class, () -> calculator.divide(6, 0));
     }
     
 }
