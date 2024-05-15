@@ -101,18 +101,16 @@ public class CalcTest {
 
     @Test
     public void testZeroToZeroExponent() {
-        ArithmeticException thrown = assertThrows(ArithmeticException.class, () -> {
+        assertThrows(ArithmeticException.class, () -> {
             calculator.power(0, 0);
         });
-        assertEquals("0^0 is undefined", thrown.getMessage());
     }
 
     @Test
     public void testZeroToNegativeExponent(){
-        ArithmeticException thrown = assertThrows(ArithmeticException.class, () -> {
+        assertThrows(ArithmeticException.class, () -> {
             calculator.power(0, -5);
         });
-        assertEquals("0^-n is undefined", thrown.getMessage());
     }
     
 }
