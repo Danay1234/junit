@@ -74,5 +74,45 @@ public class CalcTest {
         assertThrows(ArithmeticException.class, () -> calculator.factorial(21)); // This might overflow
     }
 
+    @Test
+    public void testZeroBase() {
+        assertEquals(0, calculator.power(0, 5), 1e-9); // 0^5 = 0
+    }
+
+    @Test
+    public void testZeroExponent() {
+        assertEquals(1, calculator.power(2, 0), 1e-9); // 2^0 = 1
+        assertEquals(1, calculator.power(-3, 0), 1e-9); // (-3)^0 = 1
+    }
+
+    @Test
+    public void testNegativeExponents() {
+        assertEquals(0.5, calculator.power(2, -1), 1e-9); // 2^-1 = 0.5
+        assertEquals(0.25, calculator.power(2, -2), 1e-9); // 2^-2 = 0.25
+        assertEquals(-0.125, calculator.power(-2, -3), 1e-9); // (-2)^-3 = -0.125
+    }
+
+    @Test
+    public void testFractionalBases() {
+        assertEquals(0.25, calculator.power(0.5, 2), 1e-9); // 0.5^2 = 0.25
+        assertEquals(4, calculator.power(0.5, -2), 1e-9); // 0.5^-2 = 4
+        assertEquals(0.125, calculator.power(0.5, 3), 1e-9); // 0.5^3 = 0.125
+    }
+
+    @Test
+    public void testZeroToZeroExponent() {
+        ArithmeticException thrown = assertThrows(ArithmeticException.class, () -> {
+            calculator.power(0, 0);
+        });
+        assertEquals("0^0 is undefined", thrown.getMessage());
+    }
+
+    @Test
+    public void testZeroToNegativeExponent(){
+        ArithmeticException thrown = assertThrows(ArithmeticException.class, () -> {
+            calculator.power(0, -5);
+        });
+        assertEquals("0^-n is undefined", thrown.getMessage());
+    }
     
 }
