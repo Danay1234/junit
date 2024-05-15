@@ -52,5 +52,13 @@ public class Calculator {
         return guess;
     }
 
+    public double power(double base, int exponent) {
+        double result = 1;
+        for (int i = 0; i < Math.abs(exponent); i++) {
+            result *= base;
+        }
+        return exponent < 0 ? 1 / result : result;
+    }
+
 
 }
