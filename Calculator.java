@@ -53,6 +53,9 @@ public class Calculator {
     }
 
     public double power(double base, int exponent) {
+        if(base == 0.0 && exponent <= 0){
+            throw new ArithmeticException("The exponent you chose for the base 0 is invalid.");
+        }
         double result = 1;
         for (int i = 0; i < Math.abs(exponent); i++) {
             result *= base;
