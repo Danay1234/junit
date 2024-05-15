@@ -39,5 +39,40 @@ public class CalcTest {
     public void divideByZero(){
         Assert.assertThrows(ArithmeticException.class, () -> calculator.divide(6, 0));
     }
+
+    @Test
+    public void factorialTestNegativeInput() {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
+            calculator.factorial(-1);
+        });
+        assertEquals("Negative numbers not allowed", thrown.getMessage());
+    }
+
+    @Test
+    public void factorialTestZero() {
+        assertEquals(1, calculator.factorial(0));
+    }
+
+    @Test
+    public void factorialTestSmallNumbers() {
+        assertEquals(1, calculator.factorial(1));
+        assertEquals(2, calculator.factorial(2));
+        assertEquals(6, calculator.factorial(3));
+        assertEquals(24, calculator.factorial(4));
+        assertEquals(120, calculator.factorial(5));
+    }
+
+    @Test
+    public void factorialTestLargeNumbers() {
+        //last possible value will be 20!
+        assertEquals(2432902008176640000L, calculator.factorial(20));
+    }
+
+    @Test
+    public void factorialTestBoundaryValues() {
+        // Edge cases around long's max value (2^63 - 1)
+        assertThrows(ArithmeticException.class, () -> calculator.factorial(21)); // This might overflow
+    }
+
     
 }
