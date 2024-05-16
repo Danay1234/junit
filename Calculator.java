@@ -70,7 +70,11 @@ public class Calculator {
     }
 
     public int sumArray(int[] arr) {
-        return 1;
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
+        }
+        return sum;
     }
 
 
