@@ -77,5 +77,9 @@ public class Calculator {
         return sum;
     }
 
+    public int maxArray(int[] arr) {
+        return 0;
+    }
+
 
 }
