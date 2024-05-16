@@ -170,6 +170,18 @@ public class CalcTest {
         int actual = calculator.sumArray(arr);
         assertEquals(expected, actual);
     }
+
+        @Test
+    public void testMaxArrayBasic() {
+        int[] arr = {1, 2, 3, 4, 5};
+        assertEquals(5, calculator.maxArray(arr));
+    }
+
+    @Test
+    public void testMaxArrayNegativeNumbers() {
+        int[] arr = {-5, -3, -1, -2, -4};
+        assertEquals(-1, calculator.maxArray(arr));
+    }
     
     
 }
