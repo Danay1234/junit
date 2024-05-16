@@ -77,5 +77,18 @@ public class Calculator {
         return sum;
     }
 
+    public int maxArray(int[] arr) {
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+        int max = arr[0];
+        for (int num : arr) {
+            if (num > max) {
+                max = num;
+            }
+        }
+        return max;
+    }
+
 
 }

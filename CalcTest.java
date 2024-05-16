@@ -1,6 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
-
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 public class CalcTest {
 
     private Calculator calculator = new Calculator();
@@ -168,6 +169,31 @@ public class CalcTest {
         int expected = 3;
         int actual = calculator.sumArray(arr);
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testMaxArrayBasic() {
+        int[] arr = {1, 2, 3, 4, 5};
+        assertEquals(5, calculator.maxArray(arr));
+    }
+
+    @Test
+    public void testMaxArrayNegativeNumbers() {
+        int[] arr = {-5, -3, -1, -2, -4};
+        assertEquals(-1, calculator.maxArray(arr));
+    }
+
+    @Test
+    public void testMaxArraySingleElement() {
+        int[] arr = {10};
+        assertEquals(10, calculator.maxArray(arr));
+    }
+
+    @Test
+    public void testArrayWithDuplicates() {
+        int[] duplicatesArray = {10, 20, 20, 15, 10};
+        int max = calculator.maxArray(duplicatesArray);
+        assertEquals(20, max);
     }
     
     
