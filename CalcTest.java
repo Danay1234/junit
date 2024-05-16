@@ -171,7 +171,7 @@ public class CalcTest {
         assertEquals(expected, actual);
     }
 
-        @Test
+    @Test
     public void testMaxArrayBasic() {
         int[] arr = {1, 2, 3, 4, 5};
         assertEquals(5, calculator.maxArray(arr));
@@ -181,6 +181,12 @@ public class CalcTest {
     public void testMaxArrayNegativeNumbers() {
         int[] arr = {-5, -3, -1, -2, -4};
         assertEquals(-1, calculator.maxArray(arr));
+    }
+
+    @Test
+    public void testMaxArraySingleElement() {
+        int[] arr = {10};
+        assertEquals(10, calculator.maxArray(arr));
     }
     
     
