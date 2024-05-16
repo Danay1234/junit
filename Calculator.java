@@ -63,5 +63,9 @@ public class Calculator {
         return exponent < 0 ? 1 / result : result;
     }
 
+    public int gcd(int a, int b) {
+        return 0;
+    }
+
 
 }
