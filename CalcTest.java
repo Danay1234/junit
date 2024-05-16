@@ -112,5 +112,12 @@ public class CalcTest {
             calculator.power(0, -5);
         });
     }
+
+    @Test
+    public void gcdTestZeroInputs() {
+        assertEquals(5, calculator.gcd(0, 5)); // gcd(0, 5) = 5
+        assertEquals(7, calculator.gcd(7, 0)); // gcd(7, 0) = 7
+        assertEquals(0, calculator.gcd(0, 0)); // gcd(0, 0) is often defined as 0
+    }
     
 }
