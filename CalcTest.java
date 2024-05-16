@@ -115,9 +115,19 @@ public class CalcTest {
 
     @Test
     public void gcdTestZeroInputs() {
-        assertEquals(5, calculator.gcd(0, 5)); // gcd(0, 5) = 5
-        assertEquals(7, calculator.gcd(7, 0)); // gcd(7, 0) = 7
-        assertEquals(0, calculator.gcd(0, 0)); // gcd(0, 0) is often defined as 0
+        assertEquals(5, calculator.gcd(0, 5)); // should be 5
+        assertEquals(7, calculator.gcd(7, 0)); // should be 7
+        assertEquals(0, calculator.gcd(0, 0)); 
     }
+
+    @Test
+    public void testPositiveNumbers() {
+        assertEquals(6, calculator.gcd(54, 24)); // gcd(54, 24) = 6
+        assertEquals(1, calculator.gcd(17, 13)); // gcd(17, 13) = 1
+        assertEquals(4, calculator.gcd(20, 8)); // gcd(20, 8) = 4
+    }
+
+    
+    
     
 }
