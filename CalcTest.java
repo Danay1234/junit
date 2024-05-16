@@ -146,10 +146,26 @@ public class CalcTest {
     }
 
     @Test
-    public void testSumArrayEmpty() {
+    public void arrayTestSumArrayEmpty() {
         //added this. but it currently fails.
         int[] arr = {};
         int expected = 0;
+        int actual = calculator.sumArray(arr);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void arrayTestPositiveNumbers() {
+        int[] arr = {1, 2, 3, 4, 5};
+        int expected = 15;
+        int actual = calculator.sumArray(arr);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void arrayTestMixedNumbers() {
+        int[] arr = {1, -2, 3, -4, 5};
+        int expected = 3;
         int actual = calculator.sumArray(arr);
         assertEquals(expected, actual);
     }
