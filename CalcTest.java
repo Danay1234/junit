@@ -121,13 +121,29 @@ public class CalcTest {
     }
 
     @Test
-    public void testPositiveNumbers() {
+    public void gcdTestPositiveNumbers() {
         assertEquals(6, calculator.gcd(54, 24)); // gcd(54, 24) = 6
         assertEquals(1, calculator.gcd(17, 13)); // gcd(17, 13) = 1
         assertEquals(4, calculator.gcd(20, 8)); // gcd(20, 8) = 4
     }
 
-    
+    @Test
+    public void gcdTestEqualNumbers() {
+        assertEquals(5, calculator.gcd(5, 5)); // gcd(5, 5) = 5
+        assertEquals(12, calculator.gcd(12, 12)); // gcd(12, 12) = 12
+    }
+
+    @Test
+    public void gcdTestCommutativity() {
+        assertEquals(calculator.gcd(18, 24), calculator.gcd(24, 18)); // gcd(18, 24) = gcd(24, 18)
+        assertEquals(calculator.gcd(100, 25), calculator.gcd(25, 100)); // gcd(100, 25) = gcd(25, 100)
+    } 
+
+        @Test
+    public void gcdTestPrimeNumbers() {
+        assertEquals(1, calculator.gcd(13, 17)); // gcd(13, 17) = 1
+        assertEquals(1, calculator.gcd(29, 19)); // gcd(29, 19) = 1
+    }
     
     
 }
