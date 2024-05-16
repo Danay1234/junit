@@ -69,5 +69,9 @@ public class Calculator {
         return gcd(b, a % b);
     }
 
+    public int sumArray(int[] arr) {
+        return 1;
+    }
+
 
 }
