@@ -188,6 +188,13 @@ public class CalcTest {
         int[] arr = {10};
         assertEquals(10, calculator.maxArray(arr));
     }
+
+    @Test
+    public void testArrayWithDuplicates() {
+        int[] duplicatesArray = {10, 20, 20, 15, 10};
+        int max = calculator.maxArray(duplicatesArray);
+        assertEquals(20, max);
+    }
     
     
 }
