@@ -4,7 +4,7 @@ import org.junit.Test;
 public class CalcTest {
 
     private Calculator calculator = new Calculator();
-    
+    //another calculator
     @Test
     public void testAddPositiveIntegers() {
         int result = calculator.add(5, 7);
