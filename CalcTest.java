@@ -144,6 +144,15 @@ public class CalcTest {
         assertEquals(1, calculator.gcd(13, 17)); // gcd(13, 17) = 1
         assertEquals(1, calculator.gcd(29, 19)); // gcd(29, 19) = 1
     }
+
+    @Test
+    public void testSumArrayEmpty() {
+        //added this. but it currently fails.
+        int[] arr = {};
+        int expected = 0;
+        int actual = calculator.sumArray(arr);
+        assertEquals(expected, actual);
+    }
     
     
 }
