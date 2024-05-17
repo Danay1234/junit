@@ -217,6 +217,13 @@ public class CalcTest {
             calculator.averageArray(arr);
         });
     }
+
+    @Test
+    public void testMedianEmptyArray() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            medianArray(new int[0]);
+        });
+    }
     
     
 }
