@@ -238,6 +238,13 @@ public class CalcTest {
         double expected = 2.5;
         assertEquals(expected, calculator.medianArray(arr), 0.0001);
     }
+
+    @Test
+    public void testMedianSingleElement() {
+        int[] arr = {42};
+        double expected = 42.0;
+        assertEquals(expected, calculator.medianArray(arr), 0.0001);
+    }
     
     
 }
