@@ -90,5 +90,9 @@ public class Calculator {
         return max;
     }
 
+    public double averageArray(int[] arr) {
+        return 0.0;
+    }
+
 
 }
