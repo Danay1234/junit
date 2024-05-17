@@ -204,10 +204,18 @@ public class CalcTest {
     }
 
     @Test
-    public void testSingleElement() {
+    public void testAverageSingleElement() {
         int[] arr = {42};
         double expected = 42.0;
         assertEquals(expected, calculator.averageArray(arr), 0.0001);
+    }
+
+    @Test
+    public void testAverageEmptyArray() {
+        int[] arr = {};
+        assertThrows(IllegalArgumentException.class, () -> {
+            calculator.averageArray(arr);
+        });
     }
     
     
