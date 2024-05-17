@@ -91,7 +91,10 @@ public class Calculator {
     }
 
     public double averageArray(int[] arr) {
-        return 0.0;
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+        return (double) sumArray(arr) / arr.length;
     }
 
 
