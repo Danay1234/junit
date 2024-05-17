@@ -220,8 +220,8 @@ public class CalcTest {
 
     @Test
     public void testMedianEmptyArray() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            medianArray(new int[0]);
+        assertThrows(IllegalArgumentException.class, () -> {
+            calculator.medianArray(new int[0]);
         });
     }
     
