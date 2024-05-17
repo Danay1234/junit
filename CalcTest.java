@@ -245,6 +245,13 @@ public class CalcTest {
         double expected = 42.0;
         assertEquals(expected, calculator.medianArray(arr), 0.0001);
     }
+
+    @Test
+    public void testMedianArrayWithNegativeNumbers() {
+        int[] arr = {-5, -1, -3};
+        double expected = -3.0;
+        assertEquals(expected, calculator.medianArray(arr), 0.0001);
+    }
     
     
 }
