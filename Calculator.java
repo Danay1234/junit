@@ -90,5 +90,12 @@ public class Calculator {
         return max;
     }
 
+    public double averageArray(int[] arr) {
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+        return (double) sumArray(arr) / arr.length;
+    }
+
 
 }
