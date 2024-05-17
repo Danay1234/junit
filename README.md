@@ -123,7 +123,7 @@ To contribute to this repository, follow these steps:
 5. Push your changes to your forked repository.
 6. Create a pull request to the main repository with a description of your changes.
 
-## Credits
+##Credits
 We have utilized the following packages for testing purposes:
 - JUnit (junit-4.13.2.jar)
 - Hamcrest (hamcrest-core-1.3.jar)
