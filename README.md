@@ -15,12 +15,12 @@ Table of Contents
 - [Contributing](#contributing)
 - [Credits](#credits)
 
-Features
+## Features
 - A set of mathematical operations implemented in `Calculator.java`.
 - Extensive testing of these operations using JUnit in `CalcTest.java`.
 - Collaboration and contribution through GitHub's fork and pull request model.
 
-Methods
+## Methods
 The `Calculator.java` class includes the following methods:
 - `add(int a, int b)`: Adds two integers.
 - `subtract(int a, int b)`: Subtracts the second integer from the first.
@@ -82,7 +82,7 @@ The `CalcTest.java’ class includes the following test cases:
 43. testLargeNonPrimes: Tests the `isPrime` method with large non-prime numbers.
 44. testPrimeSquares: Tests the `isPrime` method with perfect squares.
 
-Usage
+## Usage
 To use this repository and run the tests, follow these steps:
 
 Prerequisites
@@ -105,7 +105,7 @@ Running the Tests
     ```
 After running these commands, you will see the results of the tests, indicating which tests have passed and which have failed.
 
-Contributors
+## Contributors
 This repository is a result of collaborative efforts with contributions from the following individuals:
 1. Dagem Getu
 2. Danay Hayelom
@@ -114,7 +114,7 @@ This repository is a result of collaborative efforts with contributions from the
 5. Mubarek Mohammed 
 Each contributor has helped in fixing issues, creating methods, and developing test cases as part of an open-source collaboration model.
 
-Contributing
+## Contributing
 To contribute to this repository, follow these steps:
 1. Fork the repository to your own GitHub account.
 2. Clone your forked repository to your local machine.
