@@ -231,6 +231,27 @@ public class CalcTest {
         double expected = 2.0;
         assertEquals(expected, calculator.medianArray(arr), 0.0001);
     }
+
+    @Test
+    public void testMedianNormalEvenCase() {
+        int[] arr = {3, 1, 2, 4};
+        double expected = 2.5;
+        assertEquals(expected, calculator.medianArray(arr), 0.0001);
+    }
+
+    @Test
+    public void testMedianSingleElement() {
+        int[] arr = {42};
+        double expected = 42.0;
+        assertEquals(expected, calculator.medianArray(arr), 0.0001);
+    }
+
+    @Test
+    public void testMedianArrayWithNegativeNumbers() {
+        int[] arr = {-5, -1, -3};
+        double expected = -3.0;
+        assertEquals(expected, calculator.medianArray(arr), 0.0001);
+    }
     
     
 }
