@@ -95,7 +95,7 @@ Running the Tests
     git clone https://github.com/fikre4444/junit
     cd junit
     ```
-2. Compile the test file with the necessary JUnit and Hamcrest libraries:
+2. Compile the test file with the necessary JUnit jar file:
     ```bash
     javac -cp ".;junit-4.13.2.jar" CalcTest.java
     ```
