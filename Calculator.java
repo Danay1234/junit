@@ -105,7 +105,11 @@ public class Calculator {
         int[] sortedArr = arr.clone();
         java.util.Arrays.sort(sortedArr);
         int middle = sortedArr.length / 2;
-        return sortedArr[middle];
+        if (sortedArr.length % 2 == 0) { //for the case of even array langth
+            return (sortedArr[middle - 1] + sortedArr[middle]) / 2.0;
+        } else {
+            return sortedArr[middle];
+        }
     }
 
 
