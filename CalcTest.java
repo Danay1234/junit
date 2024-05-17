@@ -11,21 +11,27 @@ public class CalcTest {
 
     private Calculator calculator = new Calculator();
 
+    // @Rule
+    // public TestName testName = new TestName();
     @Rule
-    public TestName testName = new TestName();
+    public TestRule customTestNameRule = (base, description) -> new Statement() {
+        @Override
+        public void evaluate() throws Throwable {
+            System.out.println("Method: \t"+description.getMethodName() + " - TEST PASSED");
+            base.evaluate();
+        }
+    };
     
     @Test
     public void testAddPositiveIntegers() {
         int result = calculator.add(5, 7);
         Assert.assertEquals(12, result);
-        System.out.println(testName.getMethodName() + " - passed");
     }
 
     @Test
     public void testAddNegativeIntegers() {
         int result = calculator.add(-3, -2);
         Assert.assertEquals(-5, result);
-        System.out.println(testName.getMethodName() + " - passed");
     }
 
     @Test
@@ -37,7 +43,6 @@ public class CalcTest {
     @Test
     public void negativeSquareRoot() {
         Assert.assertThrows(IllegalArgumentException.class, () -> calculator.sqrt(-1.0));
-        System.out.println(testName.getMethodName() + " - passed");
     }
 
     @Test
