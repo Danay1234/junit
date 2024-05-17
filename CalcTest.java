@@ -202,6 +202,13 @@ public class CalcTest {
         double expected = 3.0;
         assertEquals(expected, calculator.averageArray(arr), 0.0001);
     }
+
+    @Test
+    public void testSingleElement() {
+        int[] arr = {42};
+        double expected = 42.0;
+        assertEquals(expected, calculator.averageArray(arr), 0.0001);
+    }
     
     
 }
