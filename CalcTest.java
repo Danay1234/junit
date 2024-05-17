@@ -211,7 +211,7 @@ public class CalcTest {
     }
 
     @Test
-    public void testEmptyArray() {
+    public void testAverageEmptyArray() {
         int[] arr = {};
         assertThrows(IllegalArgumentException.class, () -> {
             calculator.averageArray(arr);
