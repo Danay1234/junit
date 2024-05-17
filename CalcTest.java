@@ -2,6 +2,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
+
 import org.junit.Test;
 import org.junit.Rule;
 import org.junit.rules.TestName;
@@ -268,6 +271,20 @@ public class CalcTest {
         int[] arr = {-5, -1, -3};
         double expected = -3.0;
         assertEquals(expected, calculator.medianArray(arr), 0.0001);
+    }
+
+    @Test
+    public void testPrimeZeroOrOne(){
+        assertFalse(calculator.isPrime(0));
+        assertFalse(calculator.isPrime(1));
+    }
+
+    @Test
+    public void testSmallPrimes() {
+        assertTrue(calculator.isPrime(2));
+        assertTrue(calculator.isPrime(3));
+        assertTrue(calculator.isPrime(5));
+        assertTrue(calculator.isPrime(7));
     }
     
     
