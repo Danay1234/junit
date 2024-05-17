@@ -99,7 +99,10 @@ public class Calculator {
 
     public double medianArray(int[] arr) {
         //method used for finding the middle element or median in statistical naming 
-        return 0;
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+        return 0.0;
     }
 
 
