@@ -97,5 +97,10 @@ public class Calculator {
         return (double) sumArray(arr) / arr.length;
     }
 
+    public double medianArray(int[] arr) {
+        //method used for finding the middle element or median in statistical naming 
+        return 0;
+    }
+
 
 }
