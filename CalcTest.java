@@ -2,31 +2,42 @@ import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
+import org.junit.Test;
+import org.junit.rules.TestName;
+import org.junit.rules.TestRule;
+import org.junit.runners.model.Statement;
+
 public class CalcTest {
 
     private Calculator calculator = new Calculator();
-    //another calculator
+
+    @Rule
+    public TestName testName = new TestName();
+    
     @Test
     public void testAddPositiveIntegers() {
         int result = calculator.add(5, 7);
         Assert.assertEquals(12, result);
+        System.out.println(testName.getMethodName() + " - passed");
     }
 
     @Test
     public void testAddNegativeIntegers() {
         int result = calculator.add(-3, -2);
         Assert.assertEquals(-5, result);
+        System.out.println(testName.getMethodName() + " - passed");
     }
 
     @Test
     public void testSqrt() {
         Assert.assertEquals(2.0, calculator.sqrt(4.0), 0.01);
-        Assert.assertEquals(2.23, calculator.sqrt(5.0), 0.01); //supposed to fail
+        Assert.assertEquals(2.23, calculator.sqrt(5.0), 0.01); //it passes now.
     }
 
     @Test
     public void negativeSquareRoot() {
         Assert.assertThrows(IllegalArgumentException.class, () -> calculator.sqrt(-1.0));
+        System.out.println(testName.getMethodName() + " - passed");
     }
 
     @Test
