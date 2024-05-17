@@ -15,8 +15,6 @@ public class CalcTest {
 
     private Calculator calculator = new Calculator();
 
-    // @Rule
-    // public TestName testName = new TestName();
     @Rule
     public TestRule customTestNameRule = (base, description) -> new Statement() {
         @Override
@@ -91,7 +89,6 @@ public class CalcTest {
 
     @Test
     public void factorialTestBoundaryValues() {
-        // Edge cases around long's max value (2^63 - 1)
         assertThrows(ArithmeticException.class, () -> calculator.factorial(21)); // This might overflow
     }
 
