@@ -224,6 +224,13 @@ public class CalcTest {
             calculator.medianArray(new int[0]);
         });
     }
+
+    @Test
+    public void testMedianNormalOddCase() {
+        int[] arr = {3, 1, 2};
+        double expected = 2.0;
+        assertEquals(expected, calculator.medianArray(arr), 0.0001);
+    }
     
     
 }
