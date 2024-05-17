@@ -190,10 +190,17 @@ public class CalcTest {
     }
 
     @Test
-    public void testArrayWithDuplicates() {
+    public void testMaxArrayWithDuplicates() {
         int[] duplicatesArray = {10, 20, 20, 15, 10};
         int max = calculator.maxArray(duplicatesArray);
         assertEquals(20, max);
+    }
+
+    @Test
+    public void testAverageNormalCase() {
+        int[] arr = {1, 2, 3, 4, 5};
+        double expected = 3.0;
+        assertEquals(expected, calculator.averageArray(arr), 0.0001);
     }
     
     
