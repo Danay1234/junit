@@ -112,5 +112,9 @@ public class Calculator {
         }
     }
 
+    public boolean isPrime(int n) {
+        return true;
+    }
+
 
 }
