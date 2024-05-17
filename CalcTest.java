@@ -286,6 +286,38 @@ public class CalcTest {
         assertTrue(calculator.isPrime(5));
         assertTrue(calculator.isPrime(7));
     }
+
+    @Test
+    public void testSmallNonPrimes() {
+        assertFalse(calculator.isPrime(4));
+        assertFalse(calculator.isPrime(6));
+        assertFalse(calculator.isPrime(8));
+    }
+
+    @Test
+    public void testPrimeNegativeNumbers() {
+        assertFalse(calculator.isPrime(-1));
+        assertFalse(calculator.isPrime(-10));
+        assertFalse(calculator.isPrime(-17));
+    }
+
+    @Test
+    public void testLargePrimes() {
+        assertTrue(calculator.isPrime(7919)); // This is Prime
+        assertTrue(calculator.isPrime(104729)); // Also Prime
+    }
+
+    @Test
+    public void testLargeNonPrimes() {
+        assertFalse(calculator.isPrime(10000)); // Not prime
+        assertFalse(calculator.isPrime(104730)); // Also not prime
+    }
+
+    @Test
+    public void testPrimeSquares() {
+        assertFalse(calculator.isPrime(49)); // 7 * 7 (Not prime)
+        assertFalse(calculator.isPrime(121)); // 11 * 11 (Not prime)
+    }
     
     
 }
